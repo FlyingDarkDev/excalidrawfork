@@ -78,6 +78,20 @@
       color: var(--color-danger-text);
     }
   }
+
+  &:not(.excalidraw--mobile) {
+    .App-menu_top {
+      grid-template-columns: 1fr auto;
+    }
+
+    .App-menu_top > .shapes-section {
+      position: fixed;
+      left: 50%;
+      bottom: calc(1rem + var(--sab, 0));
+      transform: translateX(-50%);
+      z-index: var(--zIndex-ui-top);
+    }
+  }
 }
 
 .excalidraw-app.is-collaborating {
